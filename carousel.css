@@ -1,0 +1,102 @@
+body {
+    background-color: #d8d8d8;
+}
+
+.carousel-container {
+    border: solid 2px black;
+    background-color: white;
+    min-height: 9em;
+    width: 45em;
+    margin: 3em auto;
+    overflow: visible;
+}
+
+.carousel-items {
+    min-height: 9em;
+    width: 60em;
+    display: flex;
+    position: relative;
+    animation: carousel-move 2s ease-in-out infinite;
+}
+
+.carousel-item {
+    border: solid 1px #2c57c8;
+    width: 15em;
+    margin: 0;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+@keyframes carousel-move {
+    0% { left: 0%; }
+    99% { left: -15em; }
+    100% { left: -15em; }
+}
+
+.carousel-item:nth-child(1) {
+    order: 1;
+    animation: carousel-child-1 8s linear infinite;
+}
+
+@keyframes carousel-child-1 {
+    0% { order: 1; }
+    24.99% { order: 1; }
+    25% { order: 4; }
+    49.99% { order: 4; }
+    50% { order: 3; }
+    74.99% { order: 3; }
+    75% { order: 2; }
+    99.99% { order: 2; }
+    100% { order: 1; }
+}
+
+.carousel-item:nth-child(2) {
+    order: 2;
+    animation: carousel-child-2 8s linear infinite;
+}
+
+@keyframes carousel-child-2 {
+    0% { order: 2; }
+    24.99% { order: 2; }
+    25% { order: 1; }
+    49.99% { order: 1; }
+    50% { order: 4; }
+    74.99% { order: 4; }
+    75% { order: 3; }
+    99.99% { order: 3; }
+    100% { order: 2; }
+}
+
+.carousel-item:nth-child(3) {
+    order: 3;
+    animation: carousel-child-3 8s linear infinite;
+}
+
+@keyframes carousel-child-3 {
+    0% { order: 3; }
+    24.99% { order: 3; }
+    25% { order: 2; }
+    49.99% { order: 2; }
+    50% { order: 1; }
+    74.99% { order: 1; }
+    75% { order: 4; }
+    99.99% { order: 4; }
+    100% { order: 3; }
+}
+
+.carousel-item:nth-child(4) {
+    order: 4;
+    animation: carousel-child-4 8s linear infinite;
+}
+
+@keyframes carousel-child-4 {
+    0% { order: 4; }
+    24.99% { order: 4; }
+    25% { order: 3; }
+    49.99% { order: 3; }
+    50% { order: 2; }
+    74.99% { order: 2; }
+    75% { order: 1; }
+    99.99% { order: 1; }
+    100% { order: 4; }
+}
